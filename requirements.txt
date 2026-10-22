@@ -1,0 +1,6 @@
+fastapi==0.128.2
+starlette==0.50.0
+uvicorn==0.48.0
+itsdangerous==2.2.0
+Pillow==12.3.0
+qrcode==8.2

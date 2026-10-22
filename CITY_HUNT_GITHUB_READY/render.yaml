@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: city-hunt-backup
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: city-hunt-backup-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATA_DIR
+        value: /data
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 8000
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
